@@ -1,0 +1,369 @@
+\usepackage{setspace}
+\usepackage{graphicx} 
+% \usepackage[colorlinks=true]{hyperref}
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+\usepackage{times}
+\large
+% \setlength{\baselineskip}{2.5\baselineskip}
+
+ 
+
+\usepackage[a4paper, left=2.54cm, right=2.54cm, top=2.54cm, bottom=2.54cm]{geometry}
+
+\usepackage{hyperref}
+
+% \pagenumbering{roman}
+\setstretch{1.5}
+
+\begin{document}
+
+
+% \setlength{\baselineskip}{1.5\baselineskip}
+% \vspace{20pt}
+
+\begin{center}
+\large
+  \noindent \textbf{ A Minor Project Proposal on}
+   \vspace*{0.9cm}
+   
+    \Huge \bfseries{E-LEARNING PLATFORM }
+  
+\end{center}
+
+\begin{center}
+    % \vspace*{1cm}
+ \large
+  \vspace*{1.4cm}
+  \noindent \textbf{Submitted in Partial Fulfillment of the Requirements   }
+
+ \noindent \textbf{for the Degree of IT Engineering  under}
+
+  \noindent \textbf{Pokhara University }
+
+   \vspace*{2cm}
+ \noindent \textbf{ Submitted By }
+  
+ \noindent \textbf{ Asim Paudel }- 201541
+ 
+ \noindent \textbf{Bijaya Dulal }- 201542
+ 
+ \noindent \textbf{ Bikram Khatri} - 201543
+
+
+\vspace*{0.7cm}
+ %  \noindent \textbf{Under the supervision of  }
+
+ % \noindent \textbf{Dr. Roshan Chitrakar }
+
+ \vspace*{1.5cm}
+  \noindent \textbf{Date  }
+
+ \noindent \textbf{ 15 May 2024 }
+ 
+% \raggedright
+\vspace*{2.2cm}
+\vspace*{1.5cm}
+%   \vspace*{1.5cm}
+
+\begin{minipage}{0.2\textwidth}
+\setlength{\leftskip}{0.1cm}
+\setlength{\rightskip}{10cm}
+\includegraphics[width=\linewidth]{Nepal-College-of-Information-Technology.jpg}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}\raggedright
+\setlength{\leftskip}{0.2cm}
+  
+
+\textbf{\Large Department of IT Enginnering }
+
+\setlength{\baselineskip}{1.1\baselineskip} 
+\textbf{\LARGE NEPAL COLLEGE OF } 
+
+\textbf{\LARGE \underline{INFORMATION TECHNOLOGY}}
+
+Balkumari, Lalitpur,Nepal
+\end{minipage} 
+\end{center}
+
+\pagenumbering{roman}
+
+\clearpage
+
+\section*{\Large ABSTRACT}
+
+
+This project aims to develop a comprehensive online learning platform using Django for the backend, React for the frontend, MySQL for database management, and WebRTC for real-time communication. The platform will provide robust user authentication, scalable course management, and secure data handling. With React, we will create a dynamic and user-friendly interface that enhances the learning experience. WebRTC will be used to facilitate one-on-one doubt clearing sessions through video, allowing real-time interaction between instructors and students. The primary content delivery will be through uploaded video lectures, ensuring that students have access to high-quality educational materials at their convenience. Additionally, the platform will include a course recommendation system that suggests relevant courses based on user preferences and past activities, utilizing both content-based and collaborative filtering techniques. This feature will help personalize the learning experience, making it easier for students to find courses that match their interests and goals. Overall, this platform aims to deliver high-quality educational content and create an engaging, interactive, and personalized learning environment.
+
+\subsection*{Keywords}
+ \textit{online learning,doubt clearing session,React, WebRTC, recommendation system}
+
+\clearpage
+
+\tableofcontents
+
+\clearpage
+\listoffigures 
+\clearpage
+% \hypersetup{colourlinks=true, linkcolor=black}
+\newpage
+\pagenumbering{arabic} 
+\clearpage
+
+\section{ Problem Statements}
+
+
+
+Many existing online learning platforms face significant challenges that hinder the overall learning experience. One major issue is the lack of effective real-time communication tools for one-on-one doubt clearing sessions, which prevents students from getting timely help and clarification on their queries.  Additionally, managing and delivering high-quality video content is difficult, with issues in secure storage, seamless streaming, and accessibility.
+
+Another significant problem is the absence of customized, on-demand courses. Students often have to buy entire courses to learn about a few specific topics, which is inefficient and costly. Without an effective recommendation system, students struggle to find courses that match their interests and goals. The lack of real-time interaction and personalized suggestions affects their engagement and motivation. 
+
+By addressing these issues, the proposed online learning platform aims to create a reliable, easy-to-use, and personalized learning environment that improves student engagement and success. 
+
+
+\section{ Project Objectives}
+
+
+\begin{itemize}
+
+
+\item 
+   To Enable real-time video interactions between students and instructors for timely help and clarification of doubts.
+
+\item
+To offer customized, on-demand courses:
+Develop a system that allows students to access specific topics without purchasing entire courses, making learning more efficient and cost-effective.
+
+\item 
+   Utilize content-based and collaborative filtering techniques to suggest relevant courses based on user preferences and past activities, enhancing the personalization of the learning experience.
+
+
+\end{itemize}
+
+
+
+\clearpage
+\section{Significance of the Study}
+
+The significance of our online learning platform study lies in several key areas
+\begin{itemize}
+\item Enhanced Learning Experience: By enabling effective one-on-one doubt clearing sessions and offering customized, on-demand courses, the platform enhances the overall learning experience for students.
+
+\item Improved Student Engagement: The implementation of a robust course recommendation system based on user preferences and past activities promotes higher levels of student engagement. 
+
+\item Cost-Effectiveness and Efficiency: The availability of customized, on-demand courses reduces unnecessary expenses for students who only need to access specific topics.
+
+\end{itemize}
+
+
+
+\section{Scope and Limitations}
+\subsection*{Scope}
+\begin{itemize}
+\item Our e-learning platform offers a wide range of courses covering diverse subjects and skill levels, meeting varied learning needs.
+\item A robust recommendation system analyzes user preferences to suggest relevant courses, enhancing the personalized learning experience.
+\item Real-time video interactions enable one-on-one doubt clearing sessions, fostering better engagement and understanding among students.
+\item Scalability and optimal performance are prioritized, ensuring smooth operations and user satisfaction as the platform expands.
+\end{itemize}
+
+
+\subsection*{Limitations}
+\begin{itemize}
+\item Technical limitations, like internet connectivity issues, device compatibility challenges, and occasional server downtimes, could affect the platform's efficiency.
+
+\item Ensuring the quality and accuracy of course content, especially user-generated content, demands robust content quality assurance measures.
+\item Real-time video interactions, while facilitating communication, might not completely substitute the benefits of face-to-face interactions in specific subjects or activities.
+\item Encouraging ongoing user engagement and adoption of platform features may be challenging and may necessitate targeted strategies and incentives for effective implementation.
+\end{itemize}
+
+\section{Literature Review}
+
+
+E-learning platforms have experienced significant growth and adoption, fundamentally changing the landscape of education delivery and accessibility. Platforms like Udemy offer a wide array of courses across diverse domains, focusing on flexibility and self-paced learning. (Smith & Johnson, 2019)
+
+
+Khan Academy stands out for its provision of free, high-quality educational content, particularly in STEM subjects, and its mastery-based learning approach (Khan, 2018). Vedantu, known for live online tutoring, has gained popularity with its interactive virtual classrooms and personalized teaching methods (Gupta & Sharma, 2021).
+
+Scholarly research underscores the advantages of e-learning platforms, including improved accessibility, flexibility, and scalability, thereby making education more inclusive and convenient for learners globally (Wang & Liu, 2019). However, challenges such as ensuring content quality, enhancing user engagement, and addressing the digital divide continue to be areas of focus for ongoing research and development (Jones & Smith, 2021).
+
+In summary, e-learning platforms play a transformative role in democratizing education and meeting diverse learning needs. Udemy, Khan Academy, and Vedantu are prominent players in this space, each contributing unique features and advancements to the e-learning ecosystem.
+
+
+\clearpage
+\section{Proposed Methodology}
+
+\subsection{Software Development life cycle}
+
+
+For our project’s software development, we have chosen to use the Incremental Model. This approach involves gradually constructing the system through multiple iterations, with each iteration covering the phases of Analysis, Design, Coding, and Testing.
+
+During the initial iteration, we will concentrate on implementing the fundamental features such as user authorization and authentication, course management, video content uploading and streaming, real-time doubt clearing sessions, and a course recommendation system. These essential elements form the core functionality of our e-learning platform.
+
+In subsequent iterations, we will enhance the platform by adding features like filter-based course search, user progress tracking, gamification elements, and advanced analytics, ensuring a gradual and systematic enhancement of the system’s capabilities. The following subsection provides a concise overview of the different phases of the incremental SDLC model that we will utilize in the system's development:
+
+
+
+
+
+
+\begin{center}
+ \begin{figure}[htbp]
+\centerline{\includegraphics[scale=.7]{increment.png}}
+\caption{Incremental model}
+\label{fig}
+\end{figure}
+
+\end{center}
+\subsubsection{Requirement Gathering and Analysis:}
+In this phase, we will capture and document all possible requirements for the proposed e-learning platform. This includes features such as personalized course recommendations, one-on-one doubt clearing sessions, video content management, and real-time communication capabilities. These requirements will be documented in a requirement specification document.
+
+\subsubsection{System Design}
+The requirement specifications gathered in the first phase will be analyzed to prepare the system design. This design phase will help in specifying the necessary hardware and software requirements and defining the overall system architecture. Key components will include the backend framework using Django, frontend development with React, database management with MySQL, and integration of WebRTC for video communication.
+
+\subsubsection{Implementation:}
+Based on the system design, the platform will be developed in smaller components or units. Each unit, such as user authentication, course management, video content delivery, and the recommendation system, will be developed and individually tested for functionality in a process called Unit Testing.
+
+\subsubsection{Integration and Testing:}
+After the successful development and testing of each unit, all units will be integrated to form the complete system. The integrated system will undergo thorough testing to identify and resolve any faults or failures, ensuring that the platform functions correctly as a whole.
+
+\subsubsection{Deployment of the System:}
+Once both functional and non-functional testing are completed, the e-learning platform will be deployed in the customer environment or released to the market. This phase will ensure that the platform is accessible to users and performs well in a real-world setting.
+
+\subsubsection{Maintenance:}
+Post-deployment, issues may arise in the client environment, requiring patches to fix bugs or other problems. Additionally, enhancements and new features will be periodically released to improve the platform. Maintenance activities will ensure that the platform remains up-to-date and continues to meet user needs effectively.
+
+
+
+\subsection{Tools to be used }
+
+
+
+We will be using the following tools throughout this project to streamline the development process:
+
+\subsubsection*{Trello:}
+Trello is a web-based project management tool that we will use to collaborate with each other and to organize and manage individual tasks.
+
+\subsubsection*{Git and GitHub:}
+Git is a distributed version control system that will be used to manage different versions of the project and facilitate collaboration among team members. GitHub is a platform that uses Git for version control. We will use GitHub to host the project repository, track changes, and manage different versions of the project.
+
+\subsubsection*{VS Code:}
+Visual Studio Code (VS Code) is a code editor that will be used as the primary code editor for development tasks.
+
+\subsection{Technologies to be Used}
+We will be using the following technologies during the project development task:
+
+\subsubsection*{HTML}
+HTML (Hypertext Markup Language) is a standard markup language that defines the structure of a webpage. It consists of tags that wrap the content, which determines how the content is displayed on the webpage. We will use HTML as the markup language for the project.
+
+\subsubsection*{ReactJS:}
+ReactJS, often simply referred to as React, is an open-source JavaScript library primarily used for building user interfaces (UIs) for web applications. We will use ReactJS to build the frontend of the application.
+
+\subsubsection*{Django:}
+Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. We will use Django to build the backend of the system.
+
+\subsubsection*{WebRTC:}
+WebRTC (Web Real-Time Communication) is a technology that enables real-time audio, video, and data sharing between browsers. We will use WebRTC for real-time communication features in the platform, such as one-on-one video doubt clearing sessions.
+
+\subsubsection*{Flask (Python) :}
+The recommendation system to be used in the platform will be exposed as a Flask API. Flask is a lightweight web framework for Python. Python is a high-level, versatile programming language used in web development, automation, data science, and more.
+
+\subsubsection*{MySQL}
+We will use MySQL as a Relational Database Management System (RDBMS) for the project. SQL (Structured Query Language) will be used as the query language to interact with the database.
+
+
+\clearpage
+\section{System Design}
+
+\subsection{Use Case Diagram} 
+
+A use case diagram is a visual representation of the interactions between actors (in our case: Students, Instructors, and Administrators) and the e-learning platform. It shows the different use cases or functionalities provided by the platform and the relationships between the actors and these use cases.
+
+\begin{center}
+ \begin{figure}[htbp]
+\centerline{\includegraphics[scale=.5]{E-learningusecase.png}}
+\caption{Usecase Diagram}
+\label{fig}
+\end{figure}
+
+\end{center}
+\clearpage
+
+\section{Proposed Deliverable}
+
+Our proposed e-learning platform will deliver a comprehensive suite of functionalities aimed at enhancing the learning experience for students and instructors alike. Initially, we will produce a detailed Requirement Specification Document to capture all functional and non-functional requirements. Following this, our System Design Documentation will outline the platform's architecture, covering backend (Django), frontend (ReactJS), database (MySQL), and real-time communication (WebRTC). The project will commence with a prototype demonstrating core features such as user authentication, course management, and video content handling.
+
+Upon completion, the fully functional platform will integrate user authentication, detailed course management, video content delivery, real-time video sessions for one-on-one doubt clearing, and a personalized recommendation system. Comprehensive Test Reports will document the results of our unit, integration, system, usability, and performance testing. We will also provide extensive User and Technical Documentation, offering clear instructions for users and detailed technical information for developers. 
+
+A Deployment Plan will outline the steps for transitioning the platform to a live environment, while a Maintenance Plan will ensure ongoing support and updates. The final deliverables will include a polished Final Presentation to showcase the project, alongside video tutorials and training materials to facilitate user adoption. Additionally, a Feedback and Rating System will be implemented to continuously gather user feedback, promoting ongoing improvement and high-quality content. Through these deliverables, we aim to create a robust, user-friendly, and effective e-learning platform tailored to the needs of all stakeholders.
+
+\clearpage
+
+\section{Proposed Task and Time Schedule}
+\subsection{Time Schedule}
+
+The project schedule is planned with careful attention to requirements and constraints. We have prioritized the Requirement Analysis phase to ensure a clear understanding of project needs and to stay aligned with the project goals. This approach will help ensure that the design, development, testing, and deployment phases proceed smoothly and effectively.
+%figurebegin
+\begin{center}
+ \begin{figure}[htbp]
+\centerline{\includegraphics[scale=.4]{Table.png}}
+\caption{Time Schedule}
+\label{fig}
+\end{figure}
+
+\end{center}
+% %figureend
+
+\subsection{ Gantt Chart}
+We followed the Increment software Process Model. At each increment we are setting the
+timeline for the particular work. Each work is divided into a task and task are set at each
+increment to be completed.
+% % FIGURE1_begin
+\begin{center}
+ \begin{figure}[htbp]
+\centerline{\includegraphics[scale=.7]{chart.png}}
+\caption{Iteration 1}
+\label{fig}
+\end{figure}
+
+\end{center}
+% %figure1_end
+
+
+% %figure_2begin
+\begin{center}
+ \begin{figure}[htbp]
+\centerline{\includegraphics[scale=.6]{GanttChart(1).png}}
+\caption{Iteration 2}
+\label{fig}
+\end{figure}
+
+\end{center}
+% %figure2end
+
+%figure_3begin
+\begin{center}
+ \begin{figure}[htbp]
+\centerline{\includegraphics[scale=.6]{GanttChart(2).png}}
+\caption{Iteration 3}
+\label{fig}
+\end{figure}
+
+\end{center}
+% %figure3end
+
+\clearpage
+\section{Biblography/ references}
+\begin{itemize}
+\item 
+Reger S.Pressman, Ph.D. Seventh Edition, Software Engineering: A Practitioner’s
+Approach, McGraw Hill, 2010
+\item 
+https://react.dev
+\item 
+https://www.python.org/
+\item 
+https://www.djangoproject.com/
+\item 
+https://github.com
+
+\end{document}
+
