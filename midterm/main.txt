@@ -1,0 +1,682 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{graphicx} 
+% \usepackage[colorlinks=true]{hyperref}
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+\usepackage{times}
+\large
+% \setlength{\baselineskip}{2.5\baselineskip}
+
+ 
+
+\usepackage[a4paper, left=2.54cm, right=2.54cm, top=2.54cm, bottom=2.54cm]{geometry}
+
+\usepackage{hyperref}
+\usepackage{pgf-umlsd}
+% \pagenumbering{roman}
+\setstretch{1.5}
+
+\begin{document}
+
+
+% \setlength{\baselineskip}{1.5\baselineskip}
+% \vspace{20pt}
+
+\begin{center}
+\large
+  \noindent \textbf{ A Minor Project Mid-Term Report on }
+   \vspace*{0.9cm}
+   
+    \Huge \bfseries{E-LEARNING PLATFORM }
+  
+\end{center}
+
+\begin{center}
+    % \vspace*{1cm}
+ \large
+  \vspace*{1.4cm}
+  \noindent \textbf{Submitted in Partial Fulfillment of the Requirements   }
+
+ \noindent \textbf{for the Degree of IT Engineering  under}
+
+  \noindent \textbf{Pokhara University }
+
+   \vspace*{2cm}
+ \noindent \textbf{ Submitted By }
+  
+ \noindent \textbf{ Asim Paudel }- 201541
+ 
+ \noindent \textbf{Bijaya Dulal }- 201542
+ 
+ \noindent \textbf{ Bikram Khatri} - 201543
+
+
+\vspace*{0.7cm}
+ %  \noindent \textbf{Under the supervision of  }
+
+ % \noindent \textbf{Dr. Roshan Chitrakar }
+
+ \vspace*{1.5cm}
+  \noindent \textbf{Date  }
+
+ \noindent \textbf{ 12 June 2024 }
+ 
+% \raggedright
+\vspace*{2.2cm}
+\vspace*{1.5cm}
+%   \vspace*{1.5cm}
+
+\begin{minipage}{0.2\textwidth}
+\setlength{\leftskip}{0.1cm}
+\setlength{\rightskip}{10cm}
+\includegraphics[width=\linewidth]{Nepal-College-of-Information-Technology.jpg}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}\raggedright
+\setlength{\leftskip}{0.2cm}
+  
+
+\textbf{\Large Department of IT Enginnering }
+
+\setlength{\baselineskip}{1.1\baselineskip} 
+\textbf{\LARGE NEPAL COLLEGE OF } 
+
+\textbf{\LARGE \underline{INFORMATION TECHNOLOGY}}
+
+Balkumari, Lalitpur,Nepal
+\end{minipage} 
+\end{center}
+
+\pagenumbering{roman}
+
+\clearpage
+
+\section*{\Large ABSTRACT}
+
+
+This project aims to develop a comprehensive online learning platform using Django for the backend, React for the frontend, MySQL for database management, and WebRTC for real-time communication. The platform provides robust user authentication, scalable course management, and secure data handling. With React, a dynamic and user-friendly interface is created to enhance the learning experience. WebRTC is used to facilitate one-on-one doubt clearing sessions through video, allowing real-time interaction between instructors and students. The primary content delivery is through uploaded video lectures, ensuring students have access to high-quality educational materials at their convenience. Additionally, the platform includes a course recommendation system that suggests relevant courses based on user preferences and past activities, utilizing both content-based and collaborative filtering techniques. This feature helps personalize the learning experience, making it easier for students to find courses that match their interests and goals. Overall, this platform aims to deliver high-quality educational content and create an engaging, interactive, and personalized learning environment.
+
+\subsection*{Keywords}
+ \textit{online learning,doubt clearing session,React, WebRTC, recommendation system}
+
+\clearpage
+
+\tableofcontents
+
+\clearpage
+\listoffigures 
+\clearpage
+% \hypersetup{colourlinks=true, linkcolor=black}
+\newpage
+\pagenumbering{arabic} 
+\clearpage
+
+\section{ Problem Statements}
+
+
+
+\begin{itemize}
+\item Many e-learning platforms fail to provide personalized learning experiences, which can result in a one-size-fits-all approach that does not cater to the unique needs and preferences of individual learners.\cite{maravanyika2017adaptive}
+
+\item lack of real-time interaction between instructors and students can hinder the learning process, especially for complex subjects that require immediate clarification and feedback.\cite{cantoni2004perspectives}
+\item Users often encounter a fragmented experience on e-learning platforms due to inconsistent interfaces and a lack of integration between different features and tools.
+\item  Many e-learning platforms do not adequately cater to the needs of diverse learners, including those with disabilities, limiting their accessibility and inclusively.
+
+\item Many e-learning platforms offer content primarily in English, which can be a barrier for students in non-English-speaking regions, hindering their ability to fully engage with the material.\cite{wambui2009factors}
+
+\end{itemize}
+
+
+\section{ Project Objectives}
+
+
+\begin{itemize}
+
+\item To develop a user-friendly platform that provides a seamless and engaging learning experience for students and instructor
+
+\item 
+   To integrate real-time video sessions using WebRTC to facilitate one-on-one doubt clearing and interactive learning.
+
+\item
+To develop a personalized recommendation system using advanced algorithms to suggest relevant courses based on user preferences and activities.
+
+
+
+\item To create  high-quality educational content that is locally relevant and available in various regional languages.
+
+\end{itemize}
+
+
+
+\clearpage
+\section{Significance of the Study}
+
+The significance of our online learning platform study lies in several key areas
+\begin{itemize}
+\item Enhanced Learning Experience: By enabling effective one-on-one doubt clearing sessions and offering customized, on-demand courses, the platform enhances the overall learning experience for students.
+
+\item Improved Student Engagement: The implementation of a robust course recommendation system based on user preferences and past activities promotes higher levels of student engagement. 
+
+\item Cost-Effectiveness and Efficiency: The availability of customized, on-demand courses reduces unnecessary expenses for students who only need to access specific topics.
+
+\end{itemize}
+
+
+
+\section{Scope and Limitations}
+\subsection*{Scope}
+\begin{itemize}
+\item Our e-learning platform offers a wide range of courses covering diverse subjects and skill levels, meeting varied learning needs.
+\item A robust recommendation system analyzes user preferences to suggest relevant courses, enhancing the personalized learning experience.
+\item Real-time video interactions enable one-on-one doubt clearing sessions, fostering better engagement and understanding among students.
+\item Scalability and optimal performance are prioritized, ensuring smooth operations and user satisfaction as the platform expands.
+\end{itemize}
+
+
+\subsection*{Limitations}
+\begin{itemize}
+\item Technical limitations, like internet connectivity issues, device compatibility challenges, and occasional server downtimes, could affect the platform's efficiency.
+
+\item Ensuring the quality and accuracy of course content, especially user-generated content, demands robust content quality assurance measures.
+\item Real-time video interactions, while facilitating communication, might not completely substitute the benefits of face-to-face interactions in specific subjects or activities.
+
+\item Limited storage capacity for hosting large volumes of video and multimedia content can be a constraint.
+
+\item Limited availability of high-quality regional content in various local languages may restrict accessibility for some users.
+\end{itemize}
+
+
+
+\section{Literature Review} 
+The e-learning platforms has undergone a significant transformation in recent years, making it advances in technology and the increasing demand for flexible, accessible education. We explores key aspects of modern e-learning platforms and highlights the contributions of few similar platforms such as Udemy, Khan Academy, and Vedantu, as well as addressing unique challenges faced in regions like Nepal.
+
+Personalization is a critical factor in the effectiveness of e-learning platforms. Research has shown that personalized learning pathways, recommendations, and adaptive content significantly improve learner engagement and outcomes \cite{brusilovsky2015open}.
+
+Platforms like Khan Academy utilize data analytics to personalize the learning experience, providing students with customized recommendations based on their progress and performance.\cite{thompson2011khan}
+
+
+
+In countries like Nepal, there is a significant gap in locally made regional learning content, which limits the effectiveness of e-learning platforms for local students. The lack of content in regional languages and culturally relevant materials can hinder learning. Addressing this issue involves developing and integrating local content that resonates with the students' cultural and educational contexts. Studies have shown that learning in one's native language significantly enhances comprehension and retention \cite{pradhan2011distance} .
+
+
+
+\clearpage
+\section{ Methodology}
+
+\subsection{Software Development life cycle}
+
+
+For our project’s software development, we are utilizing the Incremental Model. This approach involves gradually constructing the system through multiple iterations, with each iteration covering the phases of Analysis, Design, Coding, and Testing.
+
+During the initial iteration, we are concentrating on implementing the fundamental features such as user authorization and authentication, course management, video content uploading and streaming, real-time doubt clearing sessions, and a course recommendation system. These essential elements are forming the core functionality of our e-learning platform.
+
+In subsequent iterations, we are enhancing the platform by adding features like filter-based course search, user progress tracking, gamification elements, and advanced analytics, ensuring a gradual and systematic enhancement of the system’s capabilities. The following subsection provides a concise overview of the different phases of the incremental SDLC model that we are utilizing in the system's development:
+
+
+
+
+
+
+\begin{center}
+ \begin{figure}[htbp]
+\centerline{\includegraphics[scale=.7]{increment.png}}
+\caption{Incremental model}
+\label{fig}
+\end{figure}
+
+\end{center}
+
+\subsubsection{Requirement Gathering and Analysis:}
+In this phase, we are capturing and documenting all possible requirements for the proposed e-learning platform. This includes features such as personalized course recommendations, one-on-one doubt clearing sessions, video content management, and real-time communication capabilities. These requirements are being documented in a requirement specification document.
+
+\subsubsection{System Design:}
+The requirement specifications gathered in the first phase are being analyzed to prepare the system design. This design phase is helping in specifying the necessary hardware and software requirements and defining the overall system architecture. Key components include the backend framework using Django, frontend development with React, database management with MySQL, and integration of WebRTC for video communication.
+
+\subsubsection{Implementation:}
+Based on the system design, the platform is being developed in smaller components or units. Each unit, such as user authentication, course management, video content delivery, and the recommendation system, is being developed and individually tested for functionality in a process called Unit Testing.
+
+\subsubsection{Integration and Testing:}
+After the successful development and testing of each unit, all units are being integrated to form the complete system. The integrated system is undergoing thorough testing to identify and resolve any faults or failures, ensuring that the platform functions correctly as a whole.
+
+\subsubsection{Deployment of the System:}
+Once both functional and non-functional testing are completed, the e-learning platform will be deployed in the customer environment or released to the market. This phase ensures that the platform is accessible to users and performs well in a real-world setting.
+
+\subsubsection{Maintenance:}
+Post-deployment, issues may arise in the client environment, requiring patches to fix bugs or other problems. Additionally, enhancements and new features are periodically being released to improve the platform. Maintenance activities ensure that the platform remains up-to-date and continues to meet user needs effectively.
+
+
+\subsection{Tools Being Used}
+
+We are currently using the following tools to streamline the development process:
+
+\subsubsection*{Trello:}
+Trello is a web-based project management tool that we are using to collaborate with each other and to organize and manage individual tasks.
+
+\subsubsection*{Git and GitHub:}
+Git is a distributed version control system that we are using to manage different versions of the project and facilitate collaboration among team members. GitHub is a platform that uses Git for version control. We are using GitHub to host the project repository, track changes, and manage different versions of the project.
+
+\subsubsection*{VS Code:}
+Visual Studio Code (VS Code) is a code editor that we are using as the primary code editor for development tasks.
+
+\subsubsection*{Latex(overleaf):}
+LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation. LaTeX is the de facto standard for the communication and publication of scientific documents.We are using latex for our documentation tasks.
+
+\subsection{Technologies Being Used}
+
+We are currently using the following technologies during the project development task:
+
+\subsubsection*{HTML}
+HTML (Hypertext Markup Language) is a standard markup language that defines the structure of a webpage. It consists of tags that wrap the content, determining how the content is displayed on the webpage. We are using HTML as the markup language for the project.
+
+\subsubsection*{ReactJS:}
+ReactJS, often simply referred to as React, is an open-source JavaScript library primarily used for building user interfaces (UIs) for web applications. We are using ReactJS to build the frontend of the application.
+
+\subsubsection*{Django:}
+Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. We are using Django to build the backend of the system.
+
+\subsubsection*{WebRTC:}
+WebRTC (Web Real-Time Communication) is a technology that enables real-time audio, video, and data sharing between browsers. We are using WebRTC for real-time communication features in the platform, such as one-on-one video doubt clearing sessions.
+
+\subsubsection*{Flask (Python):}
+The recommendation system being used in the platform is exposed as a Flask API. Flask is a lightweight web framework for Python. Python is a high-level, versatile programming language used in web development, automation, data science, and more.
+
+\subsubsection*{SQlite}
+We are using SQlite as a Relational Database Management System (RDBMS) for the project. SQL (Structured Query Language) is being used as the query language to interact with the database.
+\clearpage
+
+\section{Task Done so far}
+\begin{itemize}
+\item Frontend Development with ReactJS:
+
+   - Designed and implemented a user-friendly interface for seamless navigation and interaction.
+   - Included essential features like course browsing, user profiles, and a dashboard for efficient activity management.
+
+\item Robust SQlite Database Creation:
+
+   - Created a secure database to store user information, course details, and video content.
+   
+   - Designed schema for efficient data retrieval and manipulation, ensuring scalability as the user base grows.
+
+\item Secure Authentication System with Django:
+
+   - Implemented a reliable authentication system for user registration, login, and account management.
+   
+   - Ensured privacy and security of user data, building user confidence in the platform.
+
+\item Integration of Real-time Video Call Features using WebRTC:
+
+   - Enabled one-on-one doubt clearing sessions between students and instructors for interactive learning experiences.
+   
+   - Bridged the gap between traditional and online education, enhancing engagement and learning outcomes.
+
+\item Responsive Design for Optimal User Experience:
+
+   - Ensured the platform's responsiveness across various devices and screen sizes for an optimal user experience.
+   
+   - Facilitated seamless access and usage, regardless of the user's device.
+
+\item Foundation for Future Development Phases:
+
+   - Set a solid groundwork for implementing additional features and functionalities.
+   
+   - Positioned the platform for continuous enhancement and improvement of the overall 
+    learning experience.
+\end{itemize}
+
+\clearpage
+\section{Result and Discussion}
+\begin{itemize}
+\item Successful Implementation of User Authentication:
+
+Users can securely sign up and log, ensuring data security and user privacy.
+Validation logic during signup ensures accurate and complete data input, maintaining data integrity.
+\item  Course Creation and Management by Instructors:
+
+Instructors can create and manage courses through a detailed form, ensuring accurate and comprehensive course information.
+Validation logic ensures the quality and accuracy of course details, contributing to a robust course catalog for students.
+\item  Student Course Enrollment and Interaction:
+
+Students can enroll in courses based on their preferences and requirements, enhancing their learning experience.
+Integration of interactive features allows students to interact with course content effectively, fostering engagement and learning.
+\item  Real-time Communication Features:
+
+Integration of real-time communication tools such as chat or discussion forums enables seamless interaction between instructors and students.
+These features enhance collaboration, support, and feedback mechanisms within the learning environment.
+\item  Dashboard for Comprehensive User Experience:
+
+Developed dashboards provide users with dynamic insights such as course progress, upcoming assignments, and performance metrics.
+Additional functionalities will be incorporated into dashboards for more comprehensive monitoring and management in future updates.
+\item  Scalability and Future Expansion:
+
+The platform architecture is designed for scalability, accommodating future growth in users and courses.
+Plans for integrating advanced features like personalized learning recommendations and assessment tools are underway to enhance the platform's capabilities.
+\clearpage
+\end{itemize}
+\section{Task Remaining }
+\begin{itemize}
+\item Content/Course Management System Integration:
+
+Develop and integrate a comprehensive course management system for instructors to create, update, and organize courses efficiently.
+Implement functionalities for students to enroll in courses, track progress, and access course materials seamlessly.
+
+\item Personalized Recommendation System Implementation:
+
+Develop and integrate a personalized recommendation system using advanced algorithms to suggest relevant courses and content based on user preferences and activities.
+Enhance the personalized learning journey for each student by providing tailored course recommendations.
+
+\item Payment System Integration:
+
+Implement a secure payment system for course enrollment and transactions.
+Ensure seamless payment processing and user-friendly payment interfaces for both instructors and students.
+
+\item Admin Panel Enhancements:
+
+Work on enhancing the admin panel with additional functionalities for better course management, user management, and analytics.
+Improve reporting capabilities and administrative controls to ensure efficient platform management.
+
+\item Rating and Feedback System Implementation:
+
+Develop and integrate a rating and feedback system for courses and instructors to gather user feedback and improve course quality.
+Enable students to provide ratings, reviews, and feedback on courses, instructors, and overall platform experience.
+
+
+
+
+
+\clearpage
+\end{itemize}
+
+\section{System Design}
+
+\subsection{Use Case Diagram} 
+
+A use case diagram is a visual representation of the interactions between actors (in our case: Students, Instructors, and Administrators) and the e-learning platform. It shows the different use cases or functionalities provided by the platform and the relationships between the actors and these use cases.
+
+\begin{center}
+ \begin{figure}[htbp]
+\centerline{\includegraphics[scale=.5]{E-learningusecase.png}}
+\caption{Usecase Diagram}
+\label{fig}
+\end{figure}
+
+\end{center}
+\clearpage
+\subsection{ER Diagram}
+An Entity-Relationship (ER) Diagram visually represents the data structure of our e-learning platform. It shows the entities, such as users and courses, and their relationships, helping to organize and define the database schema. 
+
+\begin{center}
+ \begin{figure}[htbp]
+\centerline{\includegraphics[scale=.4]{erdiagram.jpg}}
+\caption{ER diagram}
+\label{fig}
+\end{figure}
+\end{center}
+\clearpage
+
+
+
+\subsection{Class Diagram} 
+ A class diagram is a critical component of designing an e-learning platform. It helps visualize the system's structure by showing the system's classes, their attributes, methods, and the relationships between the classes. Here is an class diagram for our e learning platform:
+
+
+\begin{center}
+ \begin{figure}[htbp]
+\centerline{\includegraphics[scale=.4]{classdiagram.png}}
+\caption{class Diagram}
+\label{fig}
+\end{figure}
+
+\end{center}
+\clearpage
+
+\subsection{Sequence Diagram}
+A sequence diagram for our e-learning platform illustrates the process of a student enrolling in a course, showing the interactions between the Student, System, Database, Payment Gateway, and Admin. The diagram starts with the student logging in, browsing courses, and selecting one to enroll in, followed by the system checking enrollment status and prompting for payment.Following are 3 different sequence diagram : for login , for signup and for student enrolling in certain course
+\subsubsection{login}
+\begin{figure}[h]
+  \centering
+  \begin{sequencediagram}
+    \newinst{client}{\raisebox{-0.5\height}{\includegraphics[height=1.3cm]{user.png}} }
+    \newinst[2]{server}{Server}
+    \newinst[4]{database}{Database}
+
+    \begin{sdblock}{Login}{}
+      % Client sends login request to server
+      \begin{call}{client}{login(credentials)}{server}{}
+      \end{call}
+
+      % Server validates credentials with database
+      \begin{call}{server}{validate(credentials)}{database}{validation result}
+      \end{call}
+
+      % Database returns validation result to server
+      % (Response is included in the previous call)
+
+      % Server sends login result back to client
+      \begin{call}{server}{login result}{client}{}
+      \end{call}
+    \end{sdblock}
+
+  \end{sequencediagram}
+  \caption{Sequence Diagram for User Login System}
+  \label{fig:login-sequence-diagram}
+\end{figure}
+\clearpage
+
+\subsubsection{Signup}
+\begin{figure}[h]
+  \centering
+\begin{sequencediagram}
+      \newinst{user}{\raisebox{-0.5\height}{\includegraphics[height=1.3cm]{user.png}}  }
+  \newinst[1]{web}{Web Server}
+  \newinst[1]{email}{Email Server}
+  \newinst[1]{db}{Database}
+
+  \begin{sdblock}{User Registration}{}
+  
+    \begin{call}{user}{Provide Details}{web}{Form Validation Result}
+      \begin{call}{web}{Validate Form}{web}{}
+      \end{call}
+    \end{call}
+  
+    \begin{call}{user}{Send OTP}{email}{OTP}
+      \begin{call}{email}{Send Email}{email}{}
+      \end{call}
+    \end{call}
+  
+    \begin{call}{user}{Provide OTP}{web}{Validation Result}
+      \begin{call}{web}{Validate OTP}{web}{}
+      \end{call}
+    \end{call}
+
+    \begin{call}{user}{Add User Details}{web}{Addition Result}
+      \begin{call}{web}{Add User Details}{db}{}
+      \end{call}
+    \end{call}
+  
+    
+  
+    \begin{call}{user}{Redirect}{web}{Home Page}
+      \begin{call}{web}{Redirect}{web}{}
+      \end{call}
+    \end{call}
+  
+  \end{sdblock}
+  
+\end{sequencediagram}
+  \caption{Sequence Diagram for User signup System}
+  \label{fig:signup-sequence-diagram}
+\end{figure}
+\subsubsection{Course Enrollment}
+\begin{figure}[h]
+  \centering
+  \begin{sequencediagram}
+        \newinst{student}{\raisebox{-0.5\height}{\includegraphics[height=1.3cm]{user.png}} }
+    \newinst[0.5]{system}{System}
+    \newinst[1.3]{database}{Database}
+    \newinst[2.2]{payment}{Payment Gateway}
+    \newinst[2.7]{admin}{Admin}
+
+    \begin{sdblock}{Student  Course enrollment}{}
+
+
+      % Student browses courses
+      \begin{call}{student}{browseCourses()}{system}{}
+      \end{call}
+
+      % Student selects a course to enroll
+      \begin{call}{student}{selectCourse(courseID)}{system}{}
+      \end{call}
+   
+
+   
+      % System checks enrollment status
+      \begin{call}{system}{checkEnrollment(courseID, studentID)}{database}{notEnrolled}
+      \end{call}
+
+      % System prompts for payment
+      \begin{call}{system}{promptForPayment()}{student}{}
+      \end{call}
+ 
+
+    
+      % Student enters payment details
+      \begin{call}{student}{enterPaymentDetails(details)}{system}{}
+      \end{call}
+
+      % System processes payment
+      \begin{call}{system}{processPayment(details)}{payment}{paymentConfirmation}
+      \end{call}
+
+      % System updates payment status
+      \begin{call}{system}{updatePaymentStatus(courseID, studentID)}{database}{}
+      \end{call}
+   
+
+ 
+
+
+      % Admin navigates to payment management
+      \begin{call}{admin}{navigateToPaymentManagement()}{system}{}
+      \end{call}
+
+      % Admin verifies payment status
+      \begin{call}{admin}{verifyPaymentStatus(courseID, studentID)}{system}{}
+      \end{call}
+
+      % System updates enrollment status
+      \begin{call}{system}{updateEnrollmentStatus(courseID, studentID)}{database}{}
+      \end{call}
+    
+
+      % System enrolls student in course
+      \begin{call}{system}{enrollStudent(courseID, studentID)}{database}{}
+      \end{call}
+
+      % System sends enrollment confirmation
+      \begin{call}{system}{sendEnrollmentConfirmation()}{student}{}
+      \end{call}
+
+      % Student navigates to enrolled courses
+      \begin{call}{student}{navigateToEnrolledCourses()}{system}{}
+      \end{call}
+
+      % System retrieves enrolled courses
+      \begin{call}{system}{retrieveEnrolledCourses(studentID)}{database}{courseList}
+      \end{call}
+
+      % Student selects course to access
+      \begin{call}{student}{selectCourseToAccess(courseID)}{system}{}
+      \end{call}
+
+      % System grants access to course content
+      \begin{call}{system}{grantCourseAccess(courseID, studentID)}{database}{}
+      \end{call}
+
+      % Student begins course
+      \begin{call}{student}{beginCourse(courseID)}{system}{}
+      \end{call}
+   
+    \end{sdblock}
+
+  \end{sequencediagram}
+  \caption{Sequence Diagram for Student Enroll in a Course}
+  \label{fig:enroll-sequence-diagram}
+\end{figure}
+\clearpage
+
+\section{Deliverable}
+
+For our midterm project report, the deliverables achieved so far include:
+\begin{enumerate}
+\item  Completion of a detailed Requirement Specification Document capturing all functional and non-functional requirements for the e-learning platform.
+\item  Production of System Design Documentation outlining the platform's architecture, including backend (Django), frontend (ReactJS), database (MySQL), and real-time communication (WebRTC).
+\item Development and demonstration of a prototype showcasing core features like user authentication, course management, and video content handling.
+\item  Integration of user authentication, detailed course management, video content delivery, real-time video sessions for one-on-one doubt clearing, and a personalized recommendation system into the platform.
+\item  Generation of Comprehensive Test Reports documenting the results of unit, integration, system, usability, and performance testing.
+\item  Provision of extensive User and Technical Documentation offering clear instructions for users and detailed technical information for developers.
+\item Preparation of a Deployment Plan outlining the steps for transitioning the platform to a live environment.
+\item Formulation of a Maintenance Plan to ensure ongoing support, updates, and improvements.
+
+\item Implementation of a Feedback and Rating System to continuously gather user feedback for ongoing improvement and content quality enhancement.
+\end{enumerate}
+\clearpage
+
+\section{Project Task and Time Schedule}
+\subsection{Time Schedule}
+ The project schedule is being planned with careful attention to requirements and constraints. We are prioritizing the Requirement Analysis phase to ensure a clear understanding of project needs and to stay aligned with the project goals. This approach will help ensure that the design, development, testing, and deployment phases proceed smoothly and effectively.
+%figurebegin
+\begin{center}
+ \begin{figure}[htbp]
+\centerline{\includegraphics[scale=.4]{Table.png}}
+\caption{Time Schedule}
+\label{fig}
+\end{figure}
+
+\end{center}
+% %figureend
+
+\subsection{ Gantt Chart}
+We are following the Incremental Software Process Model. At each increment, we are setting the timeline for the particular work. Each work is divided into tasks, and tasks are set at each increment to be completed.
+% % FIGURE1_begin
+\begin{center}
+ \begin{figure}[htbp]
+\centerline{\includegraphics[scale=.7]{chart.png}}
+\caption{Iteration 1}
+\label{fig}
+\end{figure}
+
+\end{center}
+% %figure1_end
+
+
+% %figure_2begin
+\begin{center}
+ \begin{figure}[htbp]
+\centerline{\includegraphics[scale=.6]{GanttChart(1).png}}
+\caption{Iteration 2}
+\label{fig}
+\end{figure}
+
+\end{center}
+% %figure2end
+
+%figure_3begin
+\begin{center}
+ \begin{figure}[htbp]
+\centerline{\includegraphics[scale=.6]{GanttChart(2).png}}
+\caption{Iteration 3}
+\label{fig}
+\end{figure}
+
+\end{center}
+% %figure3end
+
+\clearpage
+
+
+\nocite{*}
+\bibliographystyle{abbrv}
+\bibliography{annote}
+
+\end{document}
+
+
